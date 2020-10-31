@@ -1,0 +1,16 @@
+h3 {
+  z-index: 0;
+  position: relative;
+  margin-left: 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: -15px;
+    width: 100px;
+    height: 10px;
+    background: linear-gradient(135deg,rgba(255, 152, 0, .4) 0%,rgba(255,152,0,.01) 100%);
+  }
+}

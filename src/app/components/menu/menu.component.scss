@@ -1,0 +1,10 @@
+@import "./src/app/shared/styles";
+
+:host {
+  @include flex-column-center-center;
+  @include BoxShadow(5);
+  margin-right: 10px;
+  background: $primary;
+  padding: $padding;
+  border-radius: $default-border-radius;
+}

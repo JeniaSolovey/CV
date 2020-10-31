@@ -1,0 +1,44 @@
+@import "./src/app/shared/styles";
+
+:host {
+  @include flex-column-center-center;
+  @include BoxShadow(8);
+  overflow: hidden;
+  background: $primary;
+  border-radius: $default-border-radius;
+  height: $profile-card-height;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+.header {
+  position: relative;
+  @include flex-column-center-center;
+  margin-bottom: 50px;
+
+  .cover {
+    width: 400px;
+    height: 300px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  }
+
+  .avatar {
+    position: absolute;
+    top: 200px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #17171b;
+    border-radius: 50%;
+    box-shadow: -2px 2px 10px #444447;
+  }
+}
+
+.social-links {
+  * {
+    margin: 0 5px;
+  }
+}
+
+.contact-button {
+  margin-top: auto;
+}
