@@ -1,14 +1,14 @@
 @import "./src/app/shared/styles";
 
 :host {
+  min-height: 100%;
   height: fit-content;
   width: 100%;
-  padding: $padding;
-  background: $primary;
 }
 
 .about {
   margin-bottom: 50px;
+  padding-left: 20px;
 }
 
 .fun-facts {

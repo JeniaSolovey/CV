@@ -18,6 +18,8 @@ import {
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+  iconSize = '3x';
+
   globeIcon = faGlobeAfrica;
   mountainIcon = faMountain;
   codeIcon = faCodeBranch;

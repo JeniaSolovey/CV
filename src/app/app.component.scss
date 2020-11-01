@@ -23,6 +23,9 @@ app-profile {
   border-radius: 0 $default-border-radius $default-border-radius 0;
   overflow: auto;
   flex-grow: 1;
+  max-width: 60%;
+  background: rgba($primary, 0.3);
+
 
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
