@@ -33,9 +33,12 @@
 }
 
 .hobbies {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
+
+  &-row {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
 
   app-divider {
     max-width: 1px;

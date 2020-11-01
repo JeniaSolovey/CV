@@ -2,13 +2,15 @@
 
 <app-divider></app-divider>
 
-<div class="about">
-  <p>
-    Hello! I’m Yevheniy Solovey. But you can call me Jenia :).
-  </p>
-  <p>
-    Full stack developer from Ukraine. I have rich experience...
-  </p>
+<section class="about">
+  <article>
+    <p>
+      Hello! I’m Yevheniy Solovey. But you can call me Jenia :).
+    </p>
+    <p>
+      Full stack developer from Ukraine. I have rich experience...
+    </p>
+  </article>
   <table style="width: 100%">
     <tr>
       <td><b>Age:</b> 25</td>
@@ -19,58 +21,60 @@
       <td><b>Address:</b> Gdańsk, Poland</td>
     </tr>
   </table>
-</div>
+</section>
 
 <app-title>Fun Facts</app-title>
 <app-divider></app-divider>
 
-<div class="fun-facts">
-  <div class="fun-facts-item">
+<section class="fun-facts">
+  <section class="fun-facts-item">
     <fa-icon [size]="iconSize" [icon]="globeIcon"></fa-icon>
     <p>14 Countries Visited</p>
-  </div>
+  </section>
 
-  <div class="fun-facts-item">
+  <section class="fun-facts-item">
     <fa-icon [size]="iconSize" [icon]="codeIcon"></fa-icon>
     <p>24 hour - longest coding session</p>
-  </div>
+  </section>
 
   <app-divider [vertical]="true"></app-divider>
 
-  <div class="fun-facts-item">
+  <section class="fun-facts-item">
     <fa-icon [size]="iconSize" [icon]="mountainIcon"></fa-icon>
     <p>14 km - longest mountain trail</p>
-  </div>
+  </section>
 
   <app-divider [vertical]="true"></app-divider>
 
-  <div class="fun-facts-item">
+  <section class="fun-facts-item">
     <fa-icon [size]="iconSize" [icon]="infinityIcon"></fa-icon>
     <p>hours spent learning programming</p>
-  </div>
-</div>
+  </section>
+</section>
 
 <app-divider></app-divider>
 
 
 <app-title>My Hobbies</app-title>
 <app-divider></app-divider>
-<div class="hobbies">
-  <fa-icon [size]="iconSize" [icon]="carIcon"></fa-icon>
-  <app-divider [vertical]="true"></app-divider>
-  <fa-icon [size]="iconSize" [icon]="gameIcon"></fa-icon>
-  <app-divider [vertical]="true"></app-divider>
-  <fa-icon [size]="iconSize" [icon]="bookIcon"></fa-icon>
-  <app-divider [vertical]="true"></app-divider>
-  <fa-icon [size]="iconSize" [icon]="travelIcon"></fa-icon>
-</div>
-<app-divider></app-divider>
-<div class="hobbies">
-  <fa-icon [size]="iconSize" [icon]="fishIcon"></fa-icon>
-  <app-divider [vertical]="true"></app-divider>
-  <fa-icon [size]="iconSize" [icon]="hikingIcon"></fa-icon>
-  <app-divider [vertical]="true"></app-divider>
-  <fa-icon [size]="iconSize" [icon]="beerIcon"></fa-icon>
-  <app-divider [vertical]="true"></app-divider>
-  <fa-icon [size]="iconSize" [icon]="coffeeIcon"></fa-icon>
-</div>
+<section class="hobbies">
+  <section class="hobbies-row">
+    <fa-icon [size]="iconSize" [icon]="carIcon"></fa-icon>
+    <app-divider [vertical]="true"></app-divider>
+    <fa-icon [size]="iconSize" [icon]="gameIcon"></fa-icon>
+    <app-divider [vertical]="true"></app-divider>
+    <fa-icon [size]="iconSize" [icon]="bookIcon"></fa-icon>
+    <app-divider [vertical]="true"></app-divider>
+    <fa-icon [size]="iconSize" [icon]="travelIcon"></fa-icon>
+  </section>
+  <app-divider></app-divider>
+  <section class="hobbies-row">
+    <fa-icon [size]="iconSize" [icon]="fishIcon"></fa-icon>
+    <app-divider [vertical]="true"></app-divider>
+    <fa-icon [size]="iconSize" [icon]="hikingIcon"></fa-icon>
+    <app-divider [vertical]="true"></app-divider>
+    <fa-icon [size]="iconSize" [icon]="beerIcon"></fa-icon>
+    <app-divider [vertical]="true"></app-divider>
+    <fa-icon [size]="iconSize" [icon]="coffeeIcon"></fa-icon>
+  </section>
+</section>
