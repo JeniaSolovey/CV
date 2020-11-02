@@ -1,0 +1,53 @@
+@import "./src/app/shared/styles";
+
+:host {
+  width: 100%;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+
+  .background-header {
+    margin-left: 10px;
+    fa-icon {
+      color: #fb9602;
+    }
+  }
+
+  .background-item {
+    padding: 30px 20px;
+
+    header {
+      display: flex;
+
+      section {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+    }
+
+    .date-range {
+      border: #5f5f5f 1px solid;
+      color: #5f5f5f;
+      padding: 3px;
+      font-size: 14px;
+      width: fit-content;
+      margin-bottom: 10px;
+
+      &.current {
+        color: #fb9602;
+        border-color: #fb9602;
+      }
+    }
+  }
+
+  app-divider {
+    max-width: 1px;
+  }
+
+  & > section {
+    max-width: 45%;
+  }
+}

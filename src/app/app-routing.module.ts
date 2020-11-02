@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {AboutComponent} from './components/about/about.component';
-import { CvComponent } from './components/cv/cv.component';
+import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { BackgroundComponent } from './components/background/background.component';
 
 const routes: Routes = [
   {
@@ -16,8 +17,12 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'cv',
-    component: CvComponent
+    path: 'skills',
+    component: SkillsComponent
+  },
+  {
+    path: 'background',
+    component: BackgroundComponent
   },
   {
     path: 'projects',

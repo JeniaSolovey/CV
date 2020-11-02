@@ -9,9 +9,10 @@ import { AboutComponent } from './components/about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AtomsModule } from './shared/atoms/atoms.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CvComponent } from './components/cv/cv.component';
+import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { BackgroundComponent } from './components/background/background.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,10 @@ import { ContactComponent } from './components/contact/contact.component';
     ProfileComponent,
     MenuComponent,
     AboutComponent,
-    CvComponent,
+    SkillsComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

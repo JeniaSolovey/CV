@@ -13,7 +13,7 @@ $animation-start-point: random(100);
   min-height: 1px;
   background: grey;
 
-  animation: AnimationName 30s ease infinite;
+  animation: AnimationName 10s ease infinite;
 }
 
 @keyframes AnimationName {
