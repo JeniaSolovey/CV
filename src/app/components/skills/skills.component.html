@@ -1,1 +1,36 @@
 <app-title>Skills</app-title>
+<section class="skills-container">
+
+  <section class="skills">
+    <section class="skills-item" *ngFor="let skill of skills">
+      <div class="skills-item-level" style="width: 100px; height: 100px">
+        <round-progress
+          [current]="skill.level"
+          [max]="10"
+          [color]="'fb9602'"
+          [background]="'#333'"
+          [radius]="100"
+          [stroke]="10"
+          [rounded]="true"
+          [clockwise]="true"
+          [responsive]="true"
+          [duration]="4000"
+          [animation]="'easeInOutQuart'"
+          [animationDelay]="0">
+        </round-progress>
+        <b><span class="skills-item-level-label">{{skill.level}} / 10</span></b>
+      </div>
+      <span class="skills-item-name">{{skill.skill}}</span>
+    </section>
+  </section>
+
+  <section class="languages">
+    <h2>Languages</h2>
+    <ng-container *ngFor="let language of languages">
+      <p>{{language.name}}</p>
+      <div class="language-level">
+        <div class="dot" [class.filled]="dot <= language.level" *ngFor="let dot of [1,2,3,4,5,6]"></div>
+      </div>
+    </ng-container>
+  </section>
+</section>

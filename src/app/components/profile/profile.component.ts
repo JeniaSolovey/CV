@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faDownload, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faLinkedin, faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
-import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-profile',

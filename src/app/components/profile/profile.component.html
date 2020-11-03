@@ -5,8 +5,12 @@
 <h3 class="name">
   Yevheniy Solovey <fa-icon [icon]="speakerIcon"></fa-icon>
 </h3>
-<h4>
-  Full stack developer
+<h4 class="profession">
+  <app-dynamic-text [titles]="[
+  '.NET Developer',
+  'Angular Developer',
+  'Full Stack Engineer'
+  ]"></app-dynamic-text>
 </h4>
 <div class="social-links">
   <fa-icon [icon]="githubIcon"></fa-icon>

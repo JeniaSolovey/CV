@@ -13,6 +13,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BackgroundComponent } from './components/background/background.component';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BackgroundComponent } from './components/background/background.componen
     AppRoutingModule,
     FontAwesomeModule,
     AtomsModule,
+    RoundProgressModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
