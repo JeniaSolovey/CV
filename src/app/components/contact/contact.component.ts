@@ -12,4 +12,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSend($event: MouseEvent): void {
+    $event.preventDefault();
+    $event.stopPropagation();
+  }
 }

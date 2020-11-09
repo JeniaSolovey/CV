@@ -1,1 +1,7 @@
-<app-title>Contact</app-title>
+<app-title>Get in Touch</app-title>
+<form class="contact-form">
+  <input type="text" placeholder="How can I call you?">
+  <input type="email" placeholder="What's your email?">
+  <textarea name="email-content" id="email-content" cols="30" rows="10" placeholder="Your message"></textarea>
+  <button (click)="onSend($event)">Send</button>
+</form>
