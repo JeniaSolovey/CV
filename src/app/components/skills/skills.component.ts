@@ -26,8 +26,8 @@ export class SkillsComponent {
 
   languages = [
     { name: 'English - B2', level: 4 },
-    { name: 'Russian - C2', level: 6 },
     { name: 'Ukrainian - C2', level: 6 },
+    { name: 'Russian - C2', level: 6 },
     { name: 'Polish - C1', level: 5 },
   ];
 }

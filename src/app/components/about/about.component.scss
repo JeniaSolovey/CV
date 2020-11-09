@@ -7,8 +7,26 @@
 }
 
 .about {
+  display: flex;
   margin-bottom: 50px;
   padding-left: 20px;
+
+  app-divider {
+    width: 1px;
+    padding: 0;
+  }
+
+  &-basic-info b {
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+    background: #fb9602;
+  }
+
+  & > * {
+    padding: 10px;
+    width: 50%;
+  }
 }
 
 .fun-facts {
@@ -48,5 +66,20 @@
     color: #ff9800;
     padding: 20px;
     width: 25%;
+  }
+}
+
+.books {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+
+  app-divider {
+    max-width: 1px;
+  }
+
+  img {
+    padding: 5px;
+    width: 150px;
   }
 }

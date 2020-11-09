@@ -1,0 +1,26 @@
+<div class="wrapper" *ngIf="media[currentSlideIndex] as mediaItem">
+  <ng-template *ngIf="mediaItem.type === mediaTypes.img; then img else video"></ng-template>
+  <ng-template #video>
+    <video controls  autoplay [muted]="true" [src]="mediaItem.src">
+    </video>
+  </ng-template>
+  <ng-template #img>
+    <img [src]="mediaItem.src" [alt]="mediaItem.alt">
+  </ng-template>
+  <div class="controls" [class.video]="mediaItem.type === mediaTypes.video">
+    <div class="controls-previous" (click)="changeImage(currentSlideIndex - 1)">
+      <fa-icon [icon]="leftIcon"></fa-icon>
+    </div>
+    <div class="controls-next" (click)="changeImage(currentSlideIndex + 1)">
+      <fa-icon [icon]="rightIcon"></fa-icon>
+    </div>
+  </div>
+  <div class="dots" [class.video]="mediaItem.type === mediaTypes.video">
+    <div
+      class="dot"
+      *ngFor="let dot of media; let index = index"
+      [class.active]="this.currentSlideIndex === index"
+      (click)="changeImage(index)"
+    ></div>
+  </div>
+</div>

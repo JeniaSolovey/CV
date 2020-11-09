@@ -32,7 +32,7 @@ import { RoundProgressModule } from 'angular-svg-round-progressbar';
     AppRoutingModule,
     FontAwesomeModule,
     AtomsModule,
-    RoundProgressModule,
+    RoundProgressModule
   ],
   providers: [],
   bootstrap: [AppComponent]

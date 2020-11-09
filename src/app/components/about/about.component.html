@@ -5,22 +5,22 @@
 <section class="about">
   <article>
     <p>
-      Hello! I’m Yevheniy Solovey. But you can call me Jenia :).
-    </p>
-    <p>
-      Full stack developer from Ukraine. I have rich experience...
+      Hello, I'm a Full Stack Engineer.
+      I have wide experience in creating complex web systems.
+      My favorite technology stack is .Net Core with CQRS and Angular with NgRx.
+      I'm a fan of learning something new, I could spend tens of hours just trying different technologies or programming
+      languages.
+      Sometimes I even read the documentation before using frameworks :)
     </p>
   </article>
-  <table style="width: 100%">
-    <tr>
-      <td><b>Age:</b> 25</td>
-      <td><b>Residence:</b> Poland</td>
-    </tr>
-    <tr>
-      <td><b>Available for work:</b> Yes</td>
-      <td><b>Address:</b> Gdańsk, Poland</td>
-    </tr>
-  </table>
+
+  <app-divider [vertical]="true"></app-divider>
+
+  <section class="about-basic-info">
+    <p><b>Age:</b> 25</p>
+    <p><b>Residence:</b> Poland</p>
+    <p><b>Address:</b> Gdańsk, Poland</p>
+  </section>
 </section>
 
 <app-title>Fun Facts</app-title>
@@ -55,7 +55,7 @@
 <app-divider></app-divider>
 
 
-<app-title>My Hobbies (TODO fix border 90%)</app-title>
+<app-title>My Hobbies</app-title>
 <app-divider></app-divider>
 <section class="hobbies">
   <section class="hobbies-row">
@@ -79,5 +79,16 @@
   </section>
 </section>
 
+<app-divider></app-divider>
+
 <app-title>Books I recommend</app-title>
-<section></section>
+<app-divider></app-divider>
+<section class="books">
+  <img title="C# in Depth" src="./assets/books/csharp-in-depth.png" alt="c# in depth book cover">
+  <app-divider [vertical]="true"></app-divider>
+  <img title="CLR via C# by Richter" src="./assets/books/richter.jpg" alt="Richter CLR via C# book cover">
+  <app-divider [vertical]="true"></app-divider>
+  <img title="Sapiens. A Brief History of Humankind" src="./assets/books/sapiens.jpg" alt="Sapiens book cover">
+  <app-divider [vertical]="true"></app-divider>
+  <img title="1984" src="./assets/books/1984.jpg" alt="1984 book cover">
+</section>

@@ -1,0 +1,98 @@
+@import "/src/app/shared/styles";
+
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel {
+  flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+
+  #next-project-button, #prev-project-button {
+    position: absolute;
+    align-self: flex-end;
+    border-radius: 5px;
+    background: #fb9602;
+    color: black;
+    border: unset;
+    white-space: nowrap;
+    padding: 5px 15px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    transition: padding 500ms, width 500ms, transform 500ms;
+  }
+
+  #next-project-button {
+    right: 0;
+    border-radius: 5px 0 0 0;
+
+    &:hover {
+      transform: translateX(10px);
+    }
+  }
+
+  #prev-project-button {
+    left: 0;
+    border-radius: 0 5px 0 0;
+
+    &:hover {
+      transform: translateX(-10px);
+    }
+
+    &.hidden {
+      transform: translateY(100px);
+    }
+  }
+
+  .project {
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    app-image-slider {
+      height: 100%;
+    }
+
+    .image-container {
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    .description-container {
+      position: relative;
+      overflow: hidden;
+      min-height: 200px;
+      padding: 0 20px;
+
+      &-technologies {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        span {
+          color: #fb9602;
+          border-radius: 5px;
+          padding: 5px;
+          border: 1px #fb9602 solid;
+          margin-left: 5px;
+          transition: padding 400ms;
+          cursor: default;
+
+          &:hover {
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
+}
