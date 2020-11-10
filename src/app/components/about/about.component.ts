@@ -32,4 +32,22 @@ export class AboutComponent {
   beerIcon = faBeer;
   hikingIcon = faHiking;
   coffeeIcon = faCoffee;
+  age: number;
+
+  constructor() {
+    this.age = this.calculateAge();
+
+  }
+
+  private calculateAge(): number {
+    const today = new Date();
+    const birthDate = new Date(1995, 10, 8);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+
+    return age;
+  }
 }
