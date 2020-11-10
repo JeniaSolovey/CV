@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faDownload, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faLinkedin, faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -8,12 +8,12 @@ import { faFacebook, faGithub, faLinkedin, faTelegramPlane } from '@fortawesome/
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  speakerIcon = faVolumeUp;
   githubIcon = faGithub;
   facebookIcon = faFacebook;
   linkedInIcon = faLinkedin;
   downloadIcon = faDownload;
   telegramIcon = faTelegramPlane;
+  contactIcon = faEnvelope;
 
   constructor() { }
 

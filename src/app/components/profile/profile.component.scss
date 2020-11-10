@@ -11,6 +11,11 @@
   z-index: 1;
 }
 
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: unset;
+}
+
 .header {
   position: relative;
   @include flex-column-center-center;
@@ -40,11 +45,43 @@
 }
 
 .social-links {
-  * {
+  display: flex;
+
+  a {
     margin: 0 5px;
+    transition: color 400ms;
+
+    &:hover {
+      color: #fb9602;
+    }
+  }
+
+
+}
+
+.contacts-section {
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  width: 100%;
+
+  a {
+    @include flex-column-center-center;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    transition: box-shadow 500ms, color 500ms, font-size 500ms;
+
+    &:hover {
+      color: #fb9602;
+      box-shadow: inset 4px 4px 15px 0 rgba(#000, 0.5);
+      font-size: 14px;
+    }
+
+    fa-icon {
+      margin-left: 5px;
+    }
   }
 }
 
-.contact-button {
-  margin-top: auto;
-}
+

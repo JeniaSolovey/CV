@@ -3,7 +3,7 @@
   <img class="avatar" src="./assets/avatar.jpg">
 </div>
 <h3 class="name">
-  Yevheniy Solovey <fa-icon [icon]="speakerIcon"></fa-icon>
+  Yevheniy Solovey
 </h3>
 <h4 class="profession">
   <app-dynamic-text [titles]="[
@@ -13,11 +13,18 @@
   ]"></app-dynamic-text>
 </h4>
 <div class="social-links">
-  <fa-icon [icon]="githubIcon"></fa-icon>
-  <fa-icon [icon]="linkedInIcon"></fa-icon>
-  <fa-icon [icon]="facebookIcon"></fa-icon>
-  <fa-icon [icon]="telegramIcon"></fa-icon>
+  <a href="https://github.com/JeniaSolovey" target="_blank"><fa-icon [icon]="githubIcon"></fa-icon></a>
+  <a href="https://www.linkedin.com/in/ysolovey/" target="_blank"><fa-icon [icon]="linkedInIcon"></fa-icon></a>
+  <a href="https://www.facebook.com/profile.php?id=100001500310304" target="_blank"><fa-icon [icon]="facebookIcon"></fa-icon></a>
+  <a href="https://t.me/YSolovey" target="_blank"><fa-icon [icon]="telegramIcon"></fa-icon></a>
 </div>
-<p class="contact-button">
-  Download CV <fa-icon [icon]="downloadIcon"></fa-icon>
-</p>
+<app-divider style="margin-top: auto"></app-divider>
+<section class="contacts-section">
+  <a href="mailto:jeniasolovey48@gmail.com">
+    <span>Get in touch <fa-icon [icon]="contactIcon"></fa-icon></span>
+  </a>
+  <app-divider [vertical]="true"></app-divider>
+  <a href="./assets/yevheniy-solovey-CV.pdf" target="_blank">
+    <span>Download CV <fa-icon [icon]="downloadIcon"></fa-icon></span>
+  </a>
+</section>
