@@ -11,9 +11,12 @@ import { AtomsModule } from './shared/atoms/atoms.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { BackgroundComponent } from './components/background/background.component';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirePerformanceModule } from '@angular/fire/performance';
+import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,6 @@ import { RoundProgressModule } from 'angular-svg-round-progressbar';
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent,
     BackgroundComponent
   ],
   imports: [
@@ -32,9 +34,12 @@ import { RoundProgressModule } from 'angular-svg-round-progressbar';
     AppRoutingModule,
     FontAwesomeModule,
     AtomsModule,
-    RoundProgressModule
+    RoundProgressModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirePerformanceModule,
+    AngularFireAnalyticsModule
   ],
-  providers: [],
+  providers: [ScreenTrackingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

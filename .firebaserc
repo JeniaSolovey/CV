@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "yevheniy-solovey": {
+      "hosting": {
+        "CV": [
+          "yevheniy-solovey"
+        ]
+      }
+    }
+  }
+}

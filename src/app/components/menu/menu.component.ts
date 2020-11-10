@@ -12,5 +12,4 @@ export class MenuComponent {
   skillsIcon = faBrain;
   backgroundIcon = faBriefcase;
   projectsIcon = faCodeBranch;
-  contactIcon = faEnvelope;
 }
