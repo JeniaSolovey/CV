@@ -166,35 +166,35 @@ export const projectsData = [
     ],
     media: [
       {
-        src: 'assets/portfolio/mozaiq/1.png',
+        src: 'assets/portfolio/Mozaiq/1.png',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/mozaiq/2.png',
+        src: 'assets/portfolio/Mozaiq/2.png',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/mozaiq/3.png',
+        src: 'assets/portfolio/Mozaiq/3.png',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/mozaiq/4.png',
+        src: 'assets/portfolio/Mozaiq/4.png',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/mozaiq/5.png',
+        src: 'assets/portfolio/Mozaiq/5.png',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/mozaiq/6.png',
+        src: 'assets/portfolio/Mozaiq/6.png',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/mozaiq/7.mp4',
+        src: 'assets/portfolio/Mozaiq/7.mp4',
         type: MediaType.video
       },
       {
-        src: 'assets/portfolio/mozaiq/8.mp4',
+        src: 'assets/portfolio/Mozaiq/8.mp4',
         type: MediaType.video
       }
     ]
@@ -219,19 +219,19 @@ export const projectsData = [
     ],
     media: [
       {
-        src: 'assets/portfolio/prox/1.png',
+        src: 'assets/portfolio/Prox/1.png',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/prox/2.png',
+        src: 'assets/portfolio/Prox/2.png',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/prox/3.png',
+        src: 'assets/portfolio/Prox/3.png',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/prox/4.png',
+        src: 'assets/portfolio/Prox/4.png',
         type: MediaType.img
       }
     ]
@@ -253,27 +253,27 @@ export const projectsData = [
     ],
     media: [
       {
-        src: 'assets/portfolio/shameLess/1.jpg',
+        src: 'assets/portfolio/ShameLess/1.jpg',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/shameLess/2.jpg',
+        src: 'assets/portfolio/ShameLess/2.jpg',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/shameLess/3.jpg',
+        src: 'assets/portfolio/ShameLess/3.jpg',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/shameLess/4.jpg',
+        src: 'assets/portfolio/ShameLess/4.jpg',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/shameLess/5.jpg',
+        src: 'assets/portfolio/ShameLess/5.jpg',
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/shameLess/6.jpg',
+        src: 'assets/portfolio/ShameLess/6.jpg',
         type: MediaType.img
       }
     ]
