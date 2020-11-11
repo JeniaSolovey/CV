@@ -9,6 +9,10 @@
   height: $profile-card-height;
   justify-content: flex-start;
   z-index: 1;
+
+  @media (max-width: $media-tablet-width) {
+    height: 100%;
+  }
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -21,10 +25,19 @@ a:link, a:visited, a:hover, a:active {
   @include flex-column-center-center;
   margin-bottom: 50px;
 
+  @media (max-width: $media-tablet-width) {
+    top: -50px;
+  }
+
   .cover {
     width: 400px;
     height: 300px;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+
+    @media (max-width: $media-tablet-width) {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   .avatar {
@@ -41,11 +54,13 @@ a:link, a:visited, a:hover, a:active {
 .profession {
   color: #fb9602;
   height: 15px;
+  min-height: 15px;
   font-size: 15px;
 }
 
 .social-links {
   display: flex;
+  margin-bottom: 10px;
 
   a {
     margin: 0 5px;

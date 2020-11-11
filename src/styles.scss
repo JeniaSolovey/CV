@@ -10,12 +10,17 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 
-  background: $body-background-gradient;
+  background: $primary;
   color: rgba(255, 255, 255, .85);
 
   font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: $font-size;
+
+  @media (max-width: $media-tablet-width) {
+    height: unset;
+  }
 }
 
 /* width */

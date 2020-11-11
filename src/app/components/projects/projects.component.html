@@ -1,15 +1,15 @@
 <app-title>Projects</app-title>
 <section class="carousel">
   <section class="project" *ngIf="data[currentProjectIndex] as project">
-    <div class="image-container">
-      <app-image-slider [media]="project.media"></app-image-slider>
-    </div>
     <div class="description-container">
       <h3>{{project.name}}</h3>
       <div class="description-container-technologies">
         <span *ngFor="let tech of project.technologies">{{tech}}</span>
       </div>
       <p>{{project.description}}</p>
+    </div>
+    <div class="image-container">
+      <app-image-slider [media]="project.media"></app-image-slider>
     </div>
   </section>
 

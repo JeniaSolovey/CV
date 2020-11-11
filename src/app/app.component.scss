@@ -6,13 +6,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: $body-background-gradient;
+
+  @media (max-width: $media-tablet-width) {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
 
 app-menu {
   margin-left: 10px;
+  margin-right: 10px;
+
+  @media (max-width: $media-tablet-width) {
+    margin-left: unset;
+    margin-right: unset;
+  }
 }
 
 app-profile {
+  @media (max-width: $media-tablet-width) {
+    width: 90%;
+    height: 100%;
+    flex-grow: 1;
+  }
 }
 
 .content-container {
@@ -22,10 +40,18 @@ app-profile {
   height: $side-card-height;
   border-radius: 0 $default-border-radius $default-border-radius 0;
   overflow: auto;
+  overflow-x: hidden;
   flex-grow: 1;
   max-width: 60%;
   background: rgba($primary, 0.3);
 
+  @media (max-width: $media-tablet-width) {
+    width: 85%;
+    max-width: 85%;
+    height: unset;
+    overflow: unset;
+    margin: unset;
+  }
 
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;

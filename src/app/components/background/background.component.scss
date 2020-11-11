@@ -8,6 +8,10 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: $media-phone-width) {
+    flex-direction: column;
+  }
+
   .background-header {
     margin-left: 10px;
     fa-icon {
@@ -20,6 +24,7 @@
 
     header {
       display: flex;
+      flex-wrap: wrap;
 
       section {
         display: flex;
@@ -49,5 +54,8 @@
 
   & > section {
     max-width: 45%;
+    @media (max-width: $media-phone-width) {
+      max-width: 100%;
+    }
   }
 }

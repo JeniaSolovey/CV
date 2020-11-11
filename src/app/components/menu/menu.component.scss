@@ -1,33 +1,53 @@
 @import "./src/app/shared/styles";
 
 :host {
-  @include flex-column-center-center;
   @include BoxShadow(5);
-  margin-right: 10px;
   background: $primary;
   padding: $padding;
   border-radius: $default-border-radius;
+
+  @media (max-width: $media-tablet-width) {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    nav {
+      display: flex;
+      justify-content: space-evenly;
+
+      app-divider {
+        width: 1px;
+        height: 100%;
+        display: none;
+      }
+    }
+  }
 }
 
 .menu-item {
   @include flex-column-center-center;
   padding: 10px;
-  transition:  color 200ms;
+  transition: color 200ms;
   outline: none;
   text-decoration: none;
   color: inherit;
 
   fa-icon {
     font-size: 25px;
-    transition:  font-size 200ms;
+    transition: font-size 200ms;
   }
 
   &:hover {
     color: #fb9602;
     cursor: pointer;
+
     fa-icon {
-      font-size: 30px;
+      @media (min-width: $media-tablet-width) {
+        font-size: 30px;
+      }
     }
+
   }
 
   &.active {
