@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output, SimpleChanges, EventEmitter } from '@angular/core';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export enum MediaType {
@@ -25,6 +25,8 @@ export class ImageSliderComponent implements OnInit, OnChanges {
   rightIcon = faChevronRight;
   leftIcon = faChevronLeft;
 
+  @Output() imageChanged = new EventEmitter<number>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -44,5 +46,6 @@ export class ImageSliderComponent implements OnInit, OnChanges {
     if (this.currentSlideIndex === this.media.length) {
       this.currentSlideIndex = 0;
     }
+    this.imageChanged.emit(this.currentSlideIndex);
   }
 }

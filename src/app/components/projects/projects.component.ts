@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { projectsData } from './projects.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
@@ -14,7 +15,7 @@ export class ProjectsComponent implements OnInit {
   nextIcon = faArrowRight;
   prevIcon = faArrowLeft;
 
-  constructor() { }
+  constructor(private elRef: ElementRef, private scroller: ViewportScroller) { }
 
   ngOnInit(): void {
   }
@@ -31,5 +32,12 @@ export class ProjectsComponent implements OnInit {
     if (this.currentProjectIndex >= this.data.length) {
       this.currentProjectIndex = 0;
     }
+  }
+
+  onImageChanged(index: number): void {
+    setTimeout(() => {
+      this.elRef.nativeElement.scrollTo(0, 1000);
+      this.scroller.scrollToPosition([0, 1000]);
+    }, 100);
   }
 }

@@ -2,16 +2,14 @@
 
 :host {
   width: 100%;
-  //height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .carousel {
   width: 100%;
-  overflow: auto;
   position: relative;
-  padding-top: 30px;
 
   #next-project-button, #prev-project-button {
     position: absolute;
@@ -63,18 +61,12 @@
 
   .project {
     width: 100%;
-    height: auto;
     overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
     margin-bottom: 20px;
+    margin-top: 30px;
 
     app-image-slider {
-      max-height: 500px;
-    }
-
-    .image-container {
+      overflow: hidden;
     }
 
     .description-container {
@@ -88,6 +80,7 @@
 
       p {
         width: 100%;
+        text-align: justify;
       }
 
       &-technologies {

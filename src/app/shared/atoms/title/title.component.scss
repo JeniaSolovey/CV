@@ -1,3 +1,11 @@
+@import "src/app/shared/styles";
+
+@media (max-width: $media-tablet-width) {
+  :host {
+    display: none;
+  }
+}
+
 h3 {
   z-index: 0;
   position: relative;
@@ -11,6 +19,7 @@ h3 {
     left: -15px;
     width: 100px;
     height: 10px;
-    background: linear-gradient(135deg,rgba(255, 152, 0, .4) 0%,rgba(255,152,0,.01) 100%);
+    background: linear-gradient(135deg, rgba(255, 152, 0, .4) 0%, rgba(255, 152, 0, .01) 100%);
   }
+
 }
