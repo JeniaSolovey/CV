@@ -1,0 +1,32 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Cache
+        uses: actions/cache@master
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install Dependencies
+        run: npm install
+      - name: Generate environment config
+        run: |
+          mkdir -p src/environments
+          touch src/environments/environment.prod.ts
+          echo "${{ secrets.PROD_ENV }}" >> src/environments/environment.prod.ts
+          echo "${{ secrets.PROD_ENV }}" >> src/environments/environment.ts
+      - name: Build
+        run: npm run build:ci
+      - name: Deploy
+        run: npm run deploy:ci -- --token "${{ secrets.FIREBASE_TOKEN }}" --project yevheniy-solovey
