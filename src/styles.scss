@@ -21,6 +21,11 @@ body {
   @media (max-width: $media-tablet-width) {
     height: unset;
   }
+
+  * {
+    scrollbar-color: grey $primary;
+    scrollbar-width: thin;
+  }
 }
 
 /* width */
