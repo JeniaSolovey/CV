@@ -95,11 +95,15 @@ export const projectsData = [
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/m1/9.mp4',
-        type: MediaType.video
+        src: 'assets/portfolio/m1/9.png',
+        type: MediaType.img
       },
       {
         src: 'assets/portfolio/m1/10.mp4',
+        type: MediaType.video
+      },
+      {
+        src: 'assets/portfolio/m1/11.mp4',
         type: MediaType.video
       },
     ]
@@ -190,11 +194,15 @@ export const projectsData = [
         type: MediaType.img
       },
       {
-        src: 'assets/portfolio/Mozaiq/7.mp4',
-        type: MediaType.video
+        src: 'assets/portfolio/Mozaiq/7.png',
+        type: MediaType.img
       },
       {
         src: 'assets/portfolio/Mozaiq/8.mp4',
+        type: MediaType.video
+      },
+      {
+        src: 'assets/portfolio/Mozaiq/9.mp4',
         type: MediaType.video
       }
     ]

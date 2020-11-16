@@ -20,24 +20,30 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  prev(): void {
-    this.currentProjectIndex--;
-    if (this.currentProjectIndex < 0) {
-      this.currentProjectIndex = this.data.length - 1;
+  onProjectChanged(projectIndex: number): void {
+    if (window.innerWidth > 500) {
+      this.scrollTo(0, 100);
     }
-  }
 
-  next(): void {
-    this.currentProjectIndex++;
-    if (this.currentProjectIndex >= this.data.length) {
-      this.currentProjectIndex = 0;
-    }
-  }
-
-  onImageChanged(index: number): void {
     setTimeout(() => {
-      this.elRef.nativeElement.scrollTo(0, 1000);
-      this.scroller.scrollToPosition([0, 1000]);
+      this.currentProjectIndex = projectIndex;
+      if (this.currentProjectIndex < 0) {
+        this.currentProjectIndex = this.data.length - 1;
+      }
+      if (this.currentProjectIndex === this.data.length) {
+        this.currentProjectIndex = 0;
+      }
     }, 100);
+  }
+
+  onImageChanged(): void {
+    this.scrollTo(1000, 100);
+  }
+
+  private scrollTo(where: number, delay: number): void {
+    setTimeout(() => {
+      this.elRef.nativeElement.scrollTo(0, where);
+      this.scroller.scrollToPosition([0, where]);
+    }, delay);
   }
 }

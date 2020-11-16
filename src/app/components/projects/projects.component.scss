@@ -5,6 +5,11 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  @media (max-width: $media-tablet-width) {
+    overflow: hidden;
+  }
 }
 
 .carousel {
@@ -13,7 +18,7 @@
 
   #next-project-button, #prev-project-button {
     position: absolute;
-    top: 0;
+    bottom: 0;
     align-self: flex-end;
     border-radius: 5px;
     background: #fb9602;
@@ -36,13 +41,6 @@
     &:hover {
       transform: translateX(10px);
     }
-
-    @media (max-width: $media-phone-width) {
-      &:hover {
-        transform: translateY(20px) translateX(10px);
-      }
-      transform: translateY(20px);
-    }
   }
 
   #prev-project-button {
@@ -62,11 +60,16 @@
   .project {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin-bottom: 30px;
+    @media (max-width: $media-phone-width) {
+      margin-bottom: 40px;
+    }
 
     app-image-slider {
       overflow: hidden;
+      @media (min-width: $media-tablet-width) {
+        min-height: 450px;
+      }
     }
 
     .description-container {

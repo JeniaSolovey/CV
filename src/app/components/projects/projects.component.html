@@ -1,13 +1,5 @@
 <app-title>Projects</app-title>
 <section class="carousel">
-  <button id="prev-project-button" (click)="prev()" [class.hidden]="currentProjectIndex === 0">
-    <fa-icon [icon]="prevIcon"></fa-icon>
-    Previous Project
-  </button>
-  <button id="next-project-button" (click)="next()" [style.width.%]="100 - ((currentProjectIndex) / data.length * 100)">
-    Next Project
-    <fa-icon [icon]="nextIcon"></fa-icon>
-  </button>
   <section class="project" *ngIf="data[currentProjectIndex] as project">
     <div class="description-container">
       <h3>{{project.name}}</h3>
@@ -16,6 +8,14 @@
       </div>
       <p>{{project.description}}</p>
     </div>
-    <app-image-slider (imageChanged)="onImageChanged($event)" [media]="project.media"></app-image-slider>
+    <app-image-slider #slider (imageChanged)="onImageChanged()" [media]="project.media"></app-image-slider>
   </section>
+  <button #buttons id="prev-project-button" (click)="onProjectChanged(currentProjectIndex - 1)" [class.hidden]="currentProjectIndex === 0">
+    <fa-icon [icon]="prevIcon"></fa-icon>
+    Previous Project
+  </button>
+  <button id="next-project-button" (click)="onProjectChanged(currentProjectIndex + 1)" [style.width.%]="100 - ((currentProjectIndex) / data.length * 100)">
+    Next Project
+    <fa-icon [icon]="nextIcon"></fa-icon>
+  </button>
 </section>
